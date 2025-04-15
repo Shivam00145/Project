@@ -197,3 +197,7 @@ footer{
     padding: 0.5rem 3rem 0.5rem 3rem !important;
     font-size: 0.8rem !important;
 }
+
+.container-fluid{
+    background-color: #EABDE6;
+}
