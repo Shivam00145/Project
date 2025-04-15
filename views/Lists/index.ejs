@@ -1,0 +1,84 @@
+<% layout("/layouts/boilerplate") -%>
+
+     <div id="filters">
+        <nav class="bar">
+        <div class="filter-option">
+        <div class="filter">
+            <div><i class="fa-solid fa-fire"></i></div>
+            <p>Trending</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-bed"></i></div>
+            <p>Rooms</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-city"></i></div>
+            <p>Iconic Cities</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-mountain-sun"></i></div>
+            <p>Moutains</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-brands fa-fort-awesome"></i></div>
+            <p>Castle</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-person-swimming"></i></div>
+            <p>Amazing Pools</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-campground"></i></div>
+            <p>Camping</p>
+        </div><div class="filter">
+            <div><i class="fa-solid fa-cow"></i></div>
+            <p>Farms</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-brands fa-fort-awesome"></i></div>
+            <p>Castle</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-snowman"></i></div>
+            <p>Arctic</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-igloo"></i></div>
+            <p>Dome</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-gopuram"></i></div>
+            <p>Temple</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-tree"></i></div>
+            <p>Forest</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-umbrella-beach"></i></div>
+            <p>Beach</p>
+        </div>
+        </div>
+        </nav>
+     </div>
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+        <% for(let list of allList){ %>
+            <a href="lists/<%= list._id %>" class="anchor">
+            <div class="card col list-card" >
+                
+                <img src="<%= list.image.url %>" class="card-img-top" alt="List_image" style="height: 20rem;">
+                
+                <div class="card-body">
+                  <p class="card-text">
+                    <b><%= list.title %></b>
+                    <br>
+                    &#8377; <%= list.price.toLocaleString("en-IN") %> / night
+                    
+                  </p>
+                </div>
+            </div>
+            </a>
+        <% } %>  
+    </div>
+
+
